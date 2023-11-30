@@ -1,0 +1,12 @@
+<mat-toolbar class="mat-primary mat-toolbar-single-row mat-elevatmat-z8 color-barra" color="background">
+    Festivos
+</mat-toolbar>
+<div>
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Seleccione una fecha" [(ngModel)]="selectedFecha">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <button mat-stroked-button color="primary" (click)="verificarFestivo()">Comprobar fecha</button>
+</div>
